@@ -1,0 +1,151 @@
+h1 {color: pink;}
+html, body{
+    height:100%;
+    font-family:Arial;
+}
+.top{
+    background-color: rgb(255, 224, 228);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 15px 0; /*hauteur du bandeau (marge intérieur)*/
+    font-size: 40px; /*taille de la police*/
+    font-weight: bold; /*épaisseur de l'écriture*/
+    font-family: Arial; /*police de l'écriture*/
+}
+/* Conteneur principal */
+.main {
+    display: flex; /*aligne les colonnes côte à côte*/
+    padding: 50px 5%; /*marge intérieur*/
+    gap: 40px; /*espacement entre les colonnes*/
+    flex: 1; /*prend tout l'espace disponible*/
+    width: 70%; /*limite la largeur total à 70%*/
+    margin: 20px auto; /*marge 20px en haut et en bas et centré*/
+}
+
+
+/* Colonne Photo */
+.column-left {
+    flex: 1; /*1 part d'espace*/
+    max-width: 250px; /*même si l'écran est grand ne jamais dépasser 250px*/
+}
+.profile-img {
+    width: 65%; /*prends 65% de la largeur de la colonne*/
+    border-radius: 15px; /*arrondir les coins*/
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /*ombre*/
+}
+/* Colonne Texte */
+.column-middle {
+    flex: 2; /*2 part d'espace*/
+    text-align: justify; /* Aligne le texte parfaitement à gauche et à droite */
+    line-height: 1.8; /* Aère les lignes pour faciliter la lecture */
+    color: #333;
+}
+.column-middle h1 {
+    color: #d17a9d;
+    margin-bottom: 20px; /*marge extérieur en bas*/
+}
+/* Colonne Boutons */
+.column-right {
+    flex: 1; /*1 part d'espace*/
+    max-width: 200px; /*même si l'écran est grand ne jamais dépasser 200px*/
+}
+.liens-navigation {
+    display: flex; /*aligner les boutons*/
+    flex-direction: column; /*forcer les boutons à s'empiler verticalement*/
+    gap: 12px; /*espacement interne*/
+}
+.contact {
+    margin-top: 20px; /*marge extérieur en haut*/
+    text-align: center;
+}
+.button-style {
+    display: block; /*transforme le lien en une boîte rectangulaire*/
+    width: 100%; /*le bouton prend toute la largeur de son conteneur (la colonne de droite)*/
+    padding: 12px; /*marge intérieur*/
+    background-color: #fce4ec; 
+    border: 1px solid #d17a9d; /*dessine un contour fin et plein d'une couleur plus foncée*/
+    color: #d17a9d;
+    text-decoration: none; /*enlève le soulignement automatique des liens HTML*/
+    text-align: center;
+    border-radius: 8px; /*arrondir les coins*/
+    transition: all 0.3s ease; /*animation de 0,3 seconde quand on survole le bouton*/
+    margin: 4px 2px; /*4px d'espace en haut/bas 2px à gauche/droite entre les boutons*/
+    cursor: pointer; /*change l'icône de la souris en "petite main" pour montrer qu'on peut cliquer*/
+    font-size: 18px; /*taille de la police*/
+    font-weight: bold; /*épaisseur de l'écriture*/
+}
+/*Effet au survol des boutons*/
+.button-style:hover {
+    background-color: #d17a9d; /*le bouton devient rose foncé*/
+    color: white;
+    transform: scale(1.05); /*le bouton grossit légèrement (de 5%)*/
+}
+
+
+.content{
+    width: 80%; /*occupe 80% de la largeur*/
+    padding: 20px; /*marge intérieur*/
+    text-align: justify;
+}
+.photo-section {
+    display: flex; /*aligner les images*/
+    justify-content: center;
+    gap: 40px; /*espacement interne*/
+    padding: 40px; /*marge intérieur*/
+    flex-wrap: wrap; /*passer les images automatiquement à la ligne*/
+}
+/*fixer une taille précise pour le cadre des photos*/
+.photo-container {
+    width: 200px;
+    height: 100px;
+}
+/*image s'étire pour remplir exactement toute la place*/
+.photo-container img{
+    width: 100%;
+    height: 100%;
+}
+/*effet caché*/
+.photo-container .titre{
+    background-color: pink;
+    opacity: 0; /*titre invisible*/
+    font-size: 16px; /*taille de la police*/
+    padding: 10px; /*marge intérieur*/
+    color: white;
+    text-align: center;
+    width: 100%; /*la légende prend toute la largeur de la photo*/
+}
+/*Effet au survol des boutons*/
+.photo-container:hover .titre{
+    opacity: 1; /*titre visible*/
+}
+
+
+.photo-container2{
+    position: relative; /*point de repère pour les titres qui seront en position absolue*/
+    width: 300px; /*taille fixe*/
+    height: 220px; /*taille fixe*/
+    overflow: hidden; /*tout ce qui dépasse sera coupé et restera invisible*/
+    cursor: pointer; /*change l'icône de la souris en "petite main" pour montrer qu'on peut cliquer*/
+}
+.photo-container2 img{
+    width: 100%; /*l'image remplit tout l'espace de 300x220px*/
+    height: 100%; /*l'image remplit tout l'espace de 300x220px*/
+    object-fit: cover; /*permet à l'image de remplir la boîte sans être écrasée ou déformée*/
+}
+/*effet caché*/
+.photo-container2 .titre{
+    position: absolute; /*sort le texte du flux normal pour le placer par-dessus l'image*/
+    bottom: 0; /*plaque la légende tout en bas de l'image*/
+    background-color: pink;
+    opacity: 0; /*titre invisible*/
+    font-size: 16px; /*taille de la police*/
+    padding: 10px; /*marge intérieur*/
+    color: white;
+    text-align: center; 
+    width: 100%; /*la bande rose prend toute la largeur du bas de l'image*/
+    transition: opacity 0.3s ease; /*animation de 0,3 seconde quand on survole le bouton*/
+}
+/*Effet au survol des boutons*/
+.photo-container2:hover .titre{
+    opacity: 1; /*titre visible*/
+}
