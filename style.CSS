@@ -7,145 +7,137 @@ html, body{
     background-color: rgb(255, 224, 228);
     color: #FFFFFF;
     text-align: center;
-    padding: 15px 0; /*hauteur du bandeau (marge intérieur)*/
-    font-size: 40px; /*taille de la police*/
-    font-weight: bold; /*épaisseur de l'écriture*/
-    font-family: Arial; /*police de l'écriture*/
+    padding: 15px 0;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Arial;
 }
-/* Conteneur principal */
+
 .main {
-    display: flex; /*aligne les colonnes côte à côte*/
-    padding: 50px 5%; /*marge intérieur*/
-    gap: 40px; /*espacement entre les colonnes*/
-    flex: 1; /*prend tout l'espace disponible*/
-    width: 70%; /*limite la largeur total à 70%*/
-    margin: 20px auto; /*marge 20px en haut et en bas et centré*/
+    display: flex;
+    padding: 50px 5%; 
+    gap: 40px; 
+    flex: 1; 
+    width: 70%;
+    margin: 20px auto;
 }
 
 
-/* Colonne Photo */
 .column-left {
-    flex: 1; /*1 part d'espace*/
-    max-width: 250px; /*même si l'écran est grand ne jamais dépasser 250px*/
+    flex: 1;
+    max-width: 250px; 
 }
 .profile-img {
-    width: 65%; /*prends 65% de la largeur de la colonne*/
-    border-radius: 15px; /*arrondir les coins*/
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /*ombre*/
+    width: 65%; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 /* Colonne Texte */
 .column-middle {
-    flex: 2; /*2 part d'espace*/
-    text-align: justify; /* Aligne le texte parfaitement à gauche et à droite */
-    line-height: 1.8; /* Aère les lignes pour faciliter la lecture */
+    flex: 2;
+    text-align: justify;
+    line-height: 1.8; 
     color: #333;
 }
 .column-middle h1 {
     color: #d17a9d;
-    margin-bottom: 20px; /*marge extérieur en bas*/
+    margin-bottom: 20px; 
 }
-/* Colonne Boutons */
 .column-right {
-    flex: 1; /*1 part d'espace*/
-    max-width: 200px; /*même si l'écran est grand ne jamais dépasser 200px*/
+    flex: 1; 
+    max-width: 200px;
 }
 .liens-navigation {
-    display: flex; /*aligner les boutons*/
-    flex-direction: column; /*forcer les boutons à s'empiler verticalement*/
-    gap: 12px; /*espacement interne*/
+    display: flex;
+    flex-direction: column; 
+    gap: 12px; 
 }
 .contact {
-    margin-top: 20px; /*marge extérieur en haut*/
+    margin-top: 20px;
     text-align: center;
 }
 .button-style {
-    display: block; /*transforme le lien en une boîte rectangulaire*/
-    width: 100%; /*le bouton prend toute la largeur de son conteneur (la colonne de droite)*/
-    padding: 12px; /*marge intérieur*/
+    display: block; 
+    width: 100%; 
+    padding: 12px; 
     background-color: #fce4ec; 
-    border: 1px solid #d17a9d; /*dessine un contour fin et plein d'une couleur plus foncée*/
+    border: 1px solid #d17a9d; 
     color: #d17a9d;
-    text-decoration: none; /*enlève le soulignement automatique des liens HTML*/
+    text-decoration: none; 
     text-align: center;
-    border-radius: 8px; /*arrondir les coins*/
-    transition: all 0.3s ease; /*animation de 0,3 seconde quand on survole le bouton*/
-    margin: 4px 2px; /*4px d'espace en haut/bas 2px à gauche/droite entre les boutons*/
-    cursor: pointer; /*change l'icône de la souris en "petite main" pour montrer qu'on peut cliquer*/
-    font-size: 18px; /*taille de la police*/
-    font-weight: bold; /*épaisseur de l'écriture*/
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin: 4px 2px; 
+    cursor: pointer; 
+    font-size: 18px;
+    font-weight: bold; 
 }
-/*Effet au survol des boutons*/
 .button-style:hover {
-    background-color: #d17a9d; /*le bouton devient rose foncé*/
+    background-color: #d17a9d;
     color: white;
-    transform: scale(1.05); /*le bouton grossit légèrement (de 5%)*/
+    transform: scale(1.05); 
 }
 
 
 .content{
-    width: 80%; /*occupe 80% de la largeur*/
-    padding: 20px; /*marge intérieur*/
+    width: 80%;
+    padding: 20px; 
     text-align: justify;
 }
 .photo-section {
-    display: flex; /*aligner les images*/
+    display: flex; 
     justify-content: center;
-    gap: 40px; /*espacement interne*/
-    padding: 40px; /*marge intérieur*/
-    flex-wrap: wrap; /*passer les images automatiquement à la ligne*/
+    gap: 40px; 
+    padding: 40px; 
+    flex-wrap: wrap; 
 }
-/*fixer une taille précise pour le cadre des photos*/
 .photo-container {
     width: 200px;
     height: 100px;
 }
-/*image s'étire pour remplir exactement toute la place*/
 .photo-container img{
     width: 100%;
     height: 100%;
 }
-/*effet caché*/
 .photo-container .titre{
     background-color: pink;
-    opacity: 0; /*titre invisible*/
-    font-size: 16px; /*taille de la police*/
-    padding: 10px; /*marge intérieur*/
+    opacity: 0;
+    font-size: 16px;
+    padding: 10px;
     color: white;
     text-align: center;
-    width: 100%; /*la légende prend toute la largeur de la photo*/
+    width: 100%; 
 }
-/*Effet au survol des boutons*/
 .photo-container:hover .titre{
-    opacity: 1; /*titre visible*/
+    opacity: 1; 
 }
 
 
 .photo-container2{
-    position: relative; /*point de repère pour les titres qui seront en position absolue*/
-    width: 300px; /*taille fixe*/
-    height: 220px; /*taille fixe*/
-    overflow: hidden; /*tout ce qui dépasse sera coupé et restera invisible*/
-    cursor: pointer; /*change l'icône de la souris en "petite main" pour montrer qu'on peut cliquer*/
+    position: relative;
+    width: 300px; 
+    height: 220px; 
+    overflow: hidden; 
+    cursor: pointer; 
 }
 .photo-container2 img{
-    width: 100%; /*l'image remplit tout l'espace de 300x220px*/
-    height: 100%; /*l'image remplit tout l'espace de 300x220px*/
-    object-fit: cover; /*permet à l'image de remplir la boîte sans être écrasée ou déformée*/
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
 }
 /*effet caché*/
 .photo-container2 .titre{
-    position: absolute; /*sort le texte du flux normal pour le placer par-dessus l'image*/
-    bottom: 0; /*plaque la légende tout en bas de l'image*/
+    position: absolute; 
+    bottom: 0; 
     background-color: pink;
-    opacity: 0; /*titre invisible*/
-    font-size: 16px; /*taille de la police*/
-    padding: 10px; /*marge intérieur*/
+    opacity: 0; 
+    font-size: 16px; 
+    padding: 10px;
     color: white;
     text-align: center; 
-    width: 100%; /*la bande rose prend toute la largeur du bas de l'image*/
-    transition: opacity 0.3s ease; /*animation de 0,3 seconde quand on survole le bouton*/
+    width: 100%;
+    transition: opacity 0.3s ease; 
 }
-/*Effet au survol des boutons*/
 .photo-container2:hover .titre{
-    opacity: 1; /*titre visible*/
+    opacity: 1; 
 }
