@@ -125,7 +125,6 @@ html, body{
     height: 100%; 
     object-fit: cover; 
 }
-/*effet caché*/
 .photo-container2 .titre{
     position: absolute; 
     bottom: 0; 
